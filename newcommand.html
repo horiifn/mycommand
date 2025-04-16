@@ -1,111 +1,111 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MAPTBOT COMMANDS</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #0e0e10;
-      color: #f4f4f4;
+      background-color: #10161f;
+      color: #fff;
     }
     header {
-      background: #9147ff;
-      padding: 1rem 2rem;
+      background-color: #1c2331;
+      padding: 20px;
       text-align: center;
+      color: #00e6e6;
       font-size: 2rem;
-      font-weight: bold;
+      letter-spacing: 1px;
     }
     nav {
       display: flex;
-      background: #1f1f23;
+      background-color: #16202c;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
     }
     nav button {
-      flex: 1;
-      padding: 1rem;
-      background: #1f1f23;
-      color: #f4f4f4;
+      background-color: #00c3c3;
       border: none;
+      color: white;
+      padding: 10px 20px;
       cursor: pointer;
-      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 6px;
+      transition: background-color 0.3s;
     }
-    nav button.active {
-      background: #9147ff;
+    nav button:hover {
+      background-color: #00a3a3;
     }
-    .content {
-      padding: 2rem;
+    .tab {
       display: none;
+      padding: 20px;
     }
-    .content.active {
+    .tab.active {
       display: block;
     }
     .command {
-      background: #2b2b31;
-      padding: 1rem;
-      margin: 1rem 0;
-      border-left: 4px solid #9147ff;
+      background-color: #1e2a38;
+      border-left: 5px solid #00e6e6;
+      margin-bottom: 15px;
+      padding: 15px;
       border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
     }
-    .command-title {
-      font-weight: bold;
-      font-size: 1.1rem;
+    .command h3 {
+      margin: 0 0 10px 0;
+      color: #00ffff;
     }
-    .command-desc {
-      margin-top: 0.5rem;
-      color: #cfcfcf;
+    .command p {
+      margin: 0;
     }
   </style>
 </head>
 <body>
   <header>MAPTBOT COMMANDS</header>
+
   <nav>
-    <button class="tab-btn active" data-tab="fun">#Развлекательные команды</button>
-    <button class="tab-btn" data-tab="tech">#Технические команды</button>
+    <button onclick="showTab('fun')">Развлекательные команды</button>
+    <button onclick="showTab('tech')">Технические команды</button>
   </nav>
 
-  <div id="fun" class="content active">
-    <div class="command"><div class="command-title">!член</div><div class="command-desc">Показывает рандомный размер вашего члена! По умолчанию отключена!</div></div>
-    <div class="command"><div class="command-title">!мужское</div><div class="command-desc">Показывает рандомные процент вашего мужества! По умолчанию отключена!</div></div>
-    <div class="command"><div class="command-title">!револьвер</div><div class="command-desc">Стреляет в рандомного человека из чата! По умолчанию отключена! (Временно не работает)</div></div>
-    <div class="command"><div class="command-title">!сиси</div><div class="command-desc">Рандомно показывает размер ваших сись! По умолчанию отключена!</div></div>
-    <div class="command"><div class="command-title">!iq</div><div class="command-desc">Рандомно показывает ваш iq! По умолчанию отключена!</div></div>
-    <div class="command"><div class="command-title">!удача</div><div class="command-desc">Рандомно показывает ваш процент удачи! По умолчанию отключена!</div></div>
-    <div class="command"><div class="command-title">!pr</div><div class="command-desc">Рандомно показывает ваш пр в игре fortnite! По умолчанию отключена!</div></div>
-    <div class="command"><div class="command-title">!зарплата</div><div class="command-desc">Рандомно показывает вашу зарплату! По умолчанию отключена!</div></div>
-    <div class="command"><div class="command-title">!машина</div><div class="command-desc">Рандомно показывает марку вашей машины! По умолчанию отключена!</div></div>
-    <div class="command"><div class="command-title">!доброта</div><div class="command-desc">Рандомно показывает вашу доброту! По умолчанию отключена!</div></div>
-    <div class="command"><div class="command-title">!злость</div><div class="command-desc">Рандомно показывает вашу злость! По умолчанию отключена!</div></div>
-    <div class="command"><div class="command-title">!бокс</div><div class="command-desc">Начинает бой с рандомным пользователем из чата! По умолчанию отключена! (Временно не работает)</div></div>
-    <div class="command"><div class="command-title">!любовь @user</div><div class="command-desc">Рандомно показывает ваши чувства между человеком которого вы тегнули! По умолчанию отключена!</div></div>
-    <div class="command"><div class="command-title">!здоровье</div><div class="command-desc">Рандомно показывает на сколько вы здоровы! По умолчанию отключена!</div></div>
+  <div id="fun" class="tab active">
+    <div class="command"><h3>!член</h3><p>Показывает рандомный размер вашего члена! По умолчанию отключена!</p></div>
+    <div class="command"><h3>!мужское</h3><p>Показывает рандомные процент вашего мужества! По умолчанию отключена!</p></div>
+    <div class="command"><h3>!револьвер</h3><p>Стреляет в рандомного человека из чата! По умолчанию отключена!</p></div>
+    <div class="command"><h3>!сиси</h3><p>Рандомно показывает размер ваших сись! По умолчанию отключена!</p></div>
+    <div class="command"><h3>!iq</h3><p>Рандомно показывает ваш iq! По умолчанию отключена!</p></div>
+    <div class="command"><h3>!удача</h3><p>Рандомно показывает ваш процент удачи! По умолчанию отключена!</p></div>
+    <div class="command"><h3>!pr</h3><p>Рандомно показывает ваш пр в игре Fortnite! По умолчанию отключена!</p></div>
+    <div class="command"><h3>!зарплата</h3><p>Рандомно показывает вашу зарплату! По умолчанию отключена!</p></div>
+    <div class="command"><h3>!машина</h3><p>Рандомно показывает марку вашей машины! По умолчанию отключена!</p></div>
+    <div class="command"><h3>!доброта</h3><p>Рандомно показывает вашу доброту! По умолчанию отключена!</p></div>
+    <div class="command"><h3>!злость</h3><p>Рандомно показывает вашу злость! По умолчанию отключена!</p></div>
+    <div class="command"><h3>!бокс</h3><p>Начинает бой с рандомным пользователем из чата! По умолчанию отключена!</p></div>
+    <div class="command"><h3>!любовь @user</h3><p>Рандомно показывает ваши чувства между человеком которого вы тегнули! По умолчанию отключена!</p></div>
+    <div class="command"><h3>!здоровье</h3><p>Рандомно показывает на сколько вы здоровы! По умолчанию отключена!</p></div>
   </div>
 
-  <div id="tech" class="content">
-    <div class="command"><div class="command-title">!spam</div><div class="command-desc">Бот пишет от 1-50 сообщений с указанным текстом!</div></div>
-    <div class="command"><div class="command-title">!mpcomands</div><div class="command-desc">Показывает ссылку на эту страницу! (Временно не работает)</div></div>
-    <div class="command"><div class="command-title">!on !команда</div><div class="command-desc">Включает команду.</div></div>
-    <div class="command"><div class="command-title">!off !команда</div><div class="command-desc">Выключает команду.</div></div>
-    <div class="command"><div class="command-title">!mp add [текст]</div><div class="command-desc">Создает команду.(Временно не работает) </div></div>
-    <div class="command"><div class="command-title">!mp edit [текст]</div><div class="command-desc">Редактирует команду. (Временно не работает)</div></div>
-    <div class="command"><div class="command-title">!mp del [текст]</div><div class="command-desc">Удаляет команду. (Временно не работает)</div></div>
-    <div class="command"><div class="command-title">!mpgive [КлючевоеСлово]</div><div class="command-desc">Запускает розыгрыш в чате!</div></div>
+  <div id="tech" class="tab">
+    <div class="command"><h3>!spam</h3><p>Бот пишет от 1-50 сообщений с указанным текстом!</p></div>
+    <div class="command"><h3>!mpcomands</h3><p>Показывает ссылку на эту страницу!</p></div>
+    <div class="command"><h3>!on !команда</h3><p>Включает команду</p></div>
+    <div class="command"><h3>!off !команда</h3><p>Выключает команду</p></div>
+    <div class="command"><h3>!mp add [текст]</h3><p>Создает команду</p></div>
+    <div class="command"><h3>!mp edit [текст]</h3><p>Редактирует команду</p></div>
+    <div class="command"><h3>!mp del [текст]</h3><p>Удаляет команду</p></div>
+    <div class="command"><h3>!mpgive [КлючевоеСлово]</h3><p>Запускает розыгрыш в чате!</p></div>
   </div>
 
   <script>
-    const buttons = document.querySelectorAll(".tab-btn");
-    const contents = document.querySelectorAll(".content");
-
-    buttons.forEach(button => {
-      button.addEventListener("click", () => {
-        buttons.forEach(btn => btn.classList.remove("active"));
-        contents.forEach(content => content.classList.remove("active"));
-
-        button.classList.add("active");
-        document.getElementById(button.dataset.tab).classList.add("active");
+    function showTab(tabId) {
+      document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active');
       });
-    });
+      document.getElementById(tabId).classList.add('active');
+    }
   </script>
 </body>
 </html>
